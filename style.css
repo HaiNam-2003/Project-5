@@ -1,0 +1,169 @@
+@import url(https://fonts.google.com/specimen/DM+Sans);
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    display: grid;
+    gap: 18px;
+}
+
+.upper-card {
+    background-color: var(--soft-red);
+    border-radius: 20px;
+    color: var(--very-pale-orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 22px;
+    width: 480px;
+    height: 112px;  
+}
+
+.upper-card--left {
+    display: grid;
+    gap: 8px;
+}
+
+.upper-card--left .title {
+    font-size: 14px;
+    color: var(--very-pale-orange);
+}
+
+.upper-card .logo {
+    width: 55px;
+    height: 60px;
+}
+
+.lower-card {
+    background-color: var(--very-pale-orange);
+    border-radius: 20px;
+    padding: 24px 28px 30px;
+    width: 480px;
+    height: 370px;
+}
+
+.lower-card h3 {
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+
+.chart-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    height: 8em;
+    justify-content: center;
+}
+
+.chart-wrapper {
+    width: 2.4em;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.chart-value {
+    border-radius: 5px;
+    background-color: var(--soft-red);
+    width: 100%;
+    height: var(--height);
+    margin-bottom: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.chart-value:active {
+    background-color: hsl(10, 66%, 72%);
+}
+
+.chart-value.active {
+    background-color: var(--cyan);
+}
+
+.chart-value.active:active {
+    background-color: hsl(185, 25%, 64%);
+}
+
+.chart-amount {
+    position: absolute;
+    background: var(--dark-brown);
+    color: var(--very-pale-orange);
+    border-radius: 5px;
+    top: -38px;
+    padding: 6px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    left: -12px;
+    font-size: 16px;
+}
+
+.chart-title {
+    display: flex;
+    justify-content: center;
+    color: var(--medium-brown);
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    color: var(--dark-brown);
+    margin-top: 30px;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: var(--medium-brown);
+    padding: 20px 0 6px;
+}
+
+.footer-right {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+}
+
+.footer-right p {
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+.footer-right span {
+    color: var(--medium-brown);
+    font-size: 14px;
+}
